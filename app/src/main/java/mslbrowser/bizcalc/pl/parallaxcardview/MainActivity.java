@@ -29,16 +29,16 @@ public class MainActivity extends ActionBarActivity {
         super.onResume();
 
         List<ItemModel> items = new ArrayList<>();
-        items.add(new ItemModel("Title 1", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 2", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170040104553E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 3", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 4", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 5", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 6", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 7", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 8", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170040104553E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 9", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
-        items.add(new ItemModel("Title 10", "http://mars.jpl.nasa.gov/msl-raw-images/msss/01049/mcam/1049MR0046170160104565E01_DXXX.jpg"));
+        items.add(new ItemModel("Title 1", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 2", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 3", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 4", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 5", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 6", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 7", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 8", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 9", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
+        items.add(new ItemModel("Title 10", "http://www.mrwallpaper.com/wallpapers/valley-forest-panorama-1920x1080.jpg"));
 
         adapter.setData(items);
     }

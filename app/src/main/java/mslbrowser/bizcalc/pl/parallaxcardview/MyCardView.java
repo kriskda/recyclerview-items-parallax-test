@@ -15,7 +15,7 @@ public class MyCardView extends CardView {
 
     private SimpleDraweeView imageView;
     private TextView titleView;
-    private float initialMargin;
+    private LinearLayout.LayoutParams params;
 
     public MyCardView(Context context) {
         this(context, null);
@@ -34,10 +34,7 @@ public class MyCardView extends CardView {
         LayoutInflater.from(getContext()).inflate(R.layout.my_card_view, this);
         imageView = (SimpleDraweeView) findViewById(R.id.my_image);
         titleView = (TextView) findViewById(R.id.title);
-
-        initialMargin = getResources().getDimensionPixelSize(R.dimen.test_margin);
-
-        Log.i("TTT", initialMargin + "");
+        params = (LinearLayout.LayoutParams) imageView.getLayoutParams();
     }
 
     public void setImage(Uri imageUri) {
@@ -49,16 +46,21 @@ public class MyCardView extends CardView {
     }
 
     public void parallax(float listHeight) {
-        float perc = getTop() / listHeight;
+        float initialMargin = -imageView.getWidth() * Math.abs(1 / 1.62f - 1 / 1.78f);
+        float perc = (getTop() + 0.5f * imageView.getWidth() / 1.78f) / listHeight;
+
+        if (perc < 0) {
+            perc = 0;
+        } else if (perc > 1) {
+            perc = 1;
+        }
 
         int topMargin = (int) (initialMargin * (1 - perc));
         int bottomMargin = (int) (initialMargin * perc);
 
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) imageView.getLayoutParams();
         params.setMargins(0, topMargin, 0, bottomMargin);
         imageView.setLayoutParams(params);
-
-        Log.i("TTT", perc + " " + topMargin + " " + bottomMargin + " " + (topMargin + bottomMargin));
+        //  Log.i("TTT", perc + " " + topMargin + " " + bottomMargin + " " + (topMargin + bottomMargin));
     }
 
 }
